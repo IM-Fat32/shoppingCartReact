@@ -1,5 +1,15 @@
+html {
+  font-size: 2vh;
+}
+
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.App {
+  min-height: 200vh;
+  display: flex;
 }
