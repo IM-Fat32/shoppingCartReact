@@ -1,0 +1,112 @@
+.Cart {
+  background-color: white;
+  transform: translate(120%);
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  min-width: 30rem;
+  padding: 3rem;
+  z-index: 10;
+  transition: .5s;
+  backdrop-filter: blur(2px);
+}
+
+.black-backgorund {
+  background-color: black;
+  opacity: 0.5;
+  position: fixed;
+  z-index: 30;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.Cart.active {
+  transform: translate(0);
+  z-index: 9999;
+}
+
+.Cart-item {
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.Cart-item-name {
+  display: flex;
+}
+
+.name {
+  color: black;
+  font-size: 1rem;
+}
+
+.numberOfProducts {
+  border: 1px solid black;
+  padding: 0 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.price {
+  color: #5976b5;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.counter {
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.counter button {
+  width: 1rem;
+  height: 1.1rem;
+}
+
+.favIconButton {
+  background-color: #4a6fa5;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.shopToolsWrapper {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.4rem 1rem;
+}
+
+.searchInputShop {
+  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 0px 10px;
+  height: 2rem;
+  border: 1px solid #4a6fa5;
+  min-width: 15rem;
+}
+
+.toRightTools {
+  padding: 0.2rem 0.3rem;
+  background-color: #4a6fa5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cartButton {
+  cursor: pointer;
+}
+
+.toRightTools.search {
+  margin-right: 4rem;
+}
