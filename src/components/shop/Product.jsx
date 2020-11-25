@@ -1,24 +1,19 @@
 import React from 'react';
-
 import { useDispatch } from 'react-redux';
 
 import { addToCart } from '../../actions/cartActions.js'
 
-const Product = ({ nameOfProduct, price, image, id }) => {
+const Product = ({ nameOfProduct, price, image, id }) => { //utworzenie komponentu Product
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); //hook do actions
 
-  const handleAddToCart = () => {
+  const handleAddToCart = () => { //obluga eventu dodania 1 elementu do koszyka
     const itemObject = {
       nameOfProduct,
       price,
       id,
     }
-
-    dispatch(addToCart(itemObject))
-
-
-
+    dispatch(addToCart(itemObject)) //wykorzystanie hooka
   }
   return (
     <div className="item">
@@ -28,10 +23,8 @@ const Product = ({ nameOfProduct, price, image, id }) => {
         <h3>Cena: {price} zł</h3>
         <button onClick={handleAddToCart}>Add to cart</button>
       </div>
-
-
     </div >
   );
-}
+};
 
 export default Product;

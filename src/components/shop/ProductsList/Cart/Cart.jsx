@@ -1,26 +1,24 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { addToCart, deleteFromCart } from '../../../../actions/cartActions.js';
 
-import { useSelector, useDispatch } from 'react-redux';
+const Cart = ({ callback }) => { //callback , fukcja zamykająca okno koszyka
+  let totalPrice = 0; //całkowita cena produktów w koszyku
+  const productsInCart = useSelector(store => store.cart); //wczytanie głównego stanu ze store-a
+  const dispatch = useDispatch(); //hook do wykonywania akcji
 
-
-const Cart = ({ callback }) => {
-  let totalPrice = 0;
-  const productsInCart = useSelector(store => store.cart);
-  const dispatch = useDispatch();
-
-  const handleDeleteFromCart = (id) => {
-    dispatch(deleteFromCart(id));
+  const handleDeleteFromCart = (id) => { //obsługa zdarzenia przycisku usuń 1 element z koszyka
+    dispatch(deleteFromCart(id)); //jako parametr przyjmuje id elementu
   }
 
-  const handleAddToCart = (elementToAdd) => {
-    dispatch(addToCart(elementToAdd));
+  const handleAddToCart = (elementToAdd) => {//obsługa zdarzenia przycisku dodaj 1 element do koszyka zarówno z poziomu produktu jak i koszyka
+    dispatch(addToCart(elementToAdd)); //jako parametr przyjmuje obiekt, który jest następnie destryktyrozywany
   }
 
-  const showCartArray = productsInCart.map(item => {
-    const { nameOfProduct, numOfProduct, id, price } = item;
-    totalPrice += item.price * item.numOfProduct;
+  const showCartArray = productsInCart.map(item => { //tworzenie elementów w koszyku jako Array
+    const { nameOfProduct, numOfProduct, id, price } = item; //destruktaryzacja parametrow obiektu 
+    totalPrice += item.price * item.numOfProduct; //zwiekszanie totalPrice
     return (
       <div key={id} className="Cart-item">
         <div className="Cart-item-name">
