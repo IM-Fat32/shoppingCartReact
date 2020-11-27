@@ -1,3 +1,4 @@
+//biblioteki
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -5,24 +6,26 @@ import {
   Route
 } from 'react-router-dom';
 
-import Menu from './components/menu/Menu.jsx';
+//komponenty projektu
+import MainMenu from './components/MainMenu/MainMenu.jsx';
 import HomePage from './pages/homePage/HomePage.jsx';
 import ShopPage from './pages/shopPage/ShopPage.jsx';
 import ProductPage from './pages/shopPage/ProductPage.jsx';
 
-
+//style
 import './App.css';
 
+//komponent App uzywany w index.js
 function App() {
   return (
     <div className="App">
       <Router>
-        {<Menu/>}
+        {<MainMenu/>}
         <div className="context--container">
           <Switch>
             <Route path="/" exact component={HomePage}/>
-            <Route path="/shop" component={ShopPage}/>
-            <Route path='/product/:id' component={ProductPage}/>
+            <Route path="/shop" exact component={ShopPage}/>
+            <Route path='/shop/product/:id' component={ProductPage}/>
           </Switch>
         </div>
       </Router>

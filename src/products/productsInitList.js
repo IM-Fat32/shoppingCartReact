@@ -1,13 +1,13 @@
 //Productslist, poniewaz nie mam backednu ani api 
 
-import batmanTshirt from "../images/batman_tshirt.jpg";
-import blackTshirt from "../images/black_tshirt.jpg";
-import pinkTshirt from "../images/black_tshirt.jpg";
-import jacket from "../images/jacket.jpg";
-import jeans from "../images/jeans.jpg";
-import kidHoodie from "../images/kid_hoodie.jpg";
-import redHoodie from "../images/red_hoodie.jpg";
-import yellowHoodie from "../images/yellow_hoddie.jpg";
+import batmanTshirt from "./productImages/batman_tshirt.jpg";
+import blackTshirt from "./productImages/black_tshirt.jpg";
+import pinkTshirt from "./productImages/pink_tshirt.jpg";
+import jacket from "./productImages/jacket.jpg";
+import jeans from "./productImages/jeans.jpg";
+import kidHoodie from "./productImages/kid_hoodie.jpg";
+import redHoodie from "./productImages/red_hoodie.jpg";
+import yellowHoodie from "./productImages/yellow_hoddie.jpg";
 
 
 const productsInitList = [

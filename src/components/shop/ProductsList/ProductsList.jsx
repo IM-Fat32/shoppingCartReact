@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import Product from '../Product.jsx';
+import Product from '../Product/Product.jsx';
 
 import './ProductsList.css';
 
 //filtrowanie produktow do pokazania i render produktow
-const ProductList = ({ filtr }) => { //props filter z parent komponentu 
+const ProductList = () => { //props filter z parent komponentu 
+  const filtr = useSelector(store => store.filtr)
   const products = useSelector(store => store.products); //wczytanie stanu glownego produktow
   const productsList = products.map(product => {
     if (product.nameOfProduct.includes(filtr)) {
