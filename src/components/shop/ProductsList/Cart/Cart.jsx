@@ -1,6 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
+
 import { addToCart, deleteFromCart } from '../../../../actions/cartActions.js';
 
 const Cart = ({ callback }) => { //callback , fukcja zamykająca okno koszyka
@@ -27,16 +30,16 @@ const Cart = ({ callback }) => { //callback , fukcja zamykająca okno koszyka
         <div>
           <p className="price">{price} zł</p>
         </div>
-        <div className="counter">
+        <div className="numberofproducts">
           <p>Ilość: </p>
-          <button onClick={() => { handleDeleteFromCart(id) }}>-</button>
-          <p className="numberOfProducts">{numOfProduct}</p>
-          <button onClick={() => {
-            const elementToAdd = { nameOfProduct, numOfProduct, id, price };
-            handleAddToCart(elementToAdd);
-          }}>
-            +
-            </button>
+          <div className="counter">
+            <FontAwesomeIcon icon={faMinus} onClick={() => { handleDeleteFromCart(id) }} />
+            <p className="numberOfProducts">{numOfProduct}</p>
+            <FontAwesomeIcon icon={faPlus} onClick={() => {
+              const elementToAdd = { nameOfProduct, numOfProduct, id, price };
+              handleAddToCart(elementToAdd);
+            }} />
+          </div>
         </div>
       </div >
     )
@@ -45,7 +48,7 @@ const Cart = ({ callback }) => { //callback , fukcja zamykająca okno koszyka
     <div className="Cart">
       {showCartArray}
       <p>Total: {totalPrice}</p>
-      <button onClick={callback}>X</button>
+      <button className="exitCart" onClick={callback}>X</button>
     </div>
   );
 }

@@ -10,6 +10,6 @@ html {
 }
 
 .App {
-  min-height: 200vh;
+  min-height: 100vh;
   display: flex;
 }

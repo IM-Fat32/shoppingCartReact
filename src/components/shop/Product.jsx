@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { addToCart } from '../../actions/cartActions.js'
 
@@ -22,6 +23,7 @@ const Product = ({ nameOfProduct, price, image, id }) => { //utworzenie komponen
       <div className="board">
         <h3>Cena: {price} zł</h3>
         <button onClick={handleAddToCart}>Add to cart</button>
+        <Link to={`/product/${id}`}>Read more</Link>
       </div>
     </div >
   );

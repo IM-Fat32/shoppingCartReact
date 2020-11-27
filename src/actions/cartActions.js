@@ -1,6 +1,5 @@
 export const ADD_TO_CART = "ADD_TO_CART";
 export const DELETE_FROM_CART = "DELETE_FROM_CART";
-export const EDIT_CART_ITEM = "EDIT_CART_ITEM";
 
 //uchwyty dispatchow
 export const addToCart = ({nameOfProduct, numOfProduct = 1, price, id}) => ({

@@ -8,6 +8,8 @@ import {
 import Menu from './components/menu/Menu.jsx';
 import HomePage from './pages/homePage/HomePage.jsx';
 import ShopPage from './pages/shopPage/ShopPage.jsx';
+import ProductPage from './pages/shopPage/ProductPage.jsx';
+
 
 import './App.css';
 
@@ -18,12 +20,9 @@ function App() {
         {<Menu/>}
         <div className="context--container">
           <Switch>
-            <Route path="/" exact>
-              <HomePage/>
-            </Route>
-            <Route path="/shop">
-              <ShopPage/>
-            </Route>
+            <Route path="/" exact component={HomePage}/>
+            <Route path="/shop" component={ShopPage}/>
+            <Route path='/product/:id' component={ProductPage}/>
           </Switch>
         </div>
       </Router>

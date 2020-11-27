@@ -11,6 +11,18 @@
   backdrop-filter: blur(2px);
 }
 
+.exitCart {
+  position: absolute;
+  top: -0.4rem;
+  left: -0.4rem;
+  font-size: 0.6rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 50%;
+  border: 1px solid red;
+  color: red;
+  cursor: pointer;
+}
+
 .black-backgorund {
   background-color: black;
   opacity: 0.5;
@@ -30,8 +42,9 @@
   padding: 0.4rem;
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
   border: 1px solid white;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .Cart-item-name {
@@ -44,26 +57,26 @@
 }
 
 .numberOfProducts {
-  border: 1px solid black;
-  padding: 0 10px;
-  font-size: 0.7rem;
   font-weight: bold;
+  color: #4a6fa5;
+  margin: 0 0.4rem;
+  border: 1px solid black;
+  padding: 0 0.2rem;
 }
 
 .price {
   color: #5976b5;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+.numberofproducts {
+  display: flex;
 }
 
 .counter {
   display: flex;
-  margin-left: 0.5rem;
-}
-
-.counter button {
-  width: 1rem;
-  height: 1.1rem;
+  margin-left: 0.3rem;
 }
 
 .favIconButton {
