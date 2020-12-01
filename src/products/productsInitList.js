@@ -17,7 +17,7 @@ const productsInitList = [
   {nameOfProduct: "Kurtka przejściowa", price : 120, id: 107, magazine: 5 , image: jacket}, 
   {nameOfProduct: "Spodnie jeansowe", price : 100, id: 109, magazine: 5 , image: jeans}, 
   {nameOfProduct: "Bluza dziecięca", price : 80, id: 110, magazine: 5 , image: kidHoodie}, 
-  {nameOfProduct: "Bluza czerwona", price : 200, id: 112, magazine: 15 , image: redHoodie}, 
+  {nameOfProduct: "Bluza czerwona", price : 200, id: 112, magazine: 15 , image: redHoodie},
   {nameOfProduct: "Bluza żółta", price : 210, id: 114, magazine: 225 , image: yellowHoodie}, 
 ];
 

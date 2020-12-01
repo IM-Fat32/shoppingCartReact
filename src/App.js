@@ -15,6 +15,7 @@ import ProductPage from './pages/shopPage/ProductPage.jsx';
 //style
 import './App.css';
 
+
 //komponent App uzywany w index.js
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <div className="context--container">
           <Switch>
             <Route path="/" exact component={HomePage}/>
-            <Route path="/shop" exact component={ShopPage}/>
+            <Route path="/shop/:page" exact component={ShopPage}/>
             <Route path='/shop/product/:id' component={ProductPage}/>
           </Switch>
         </div>
@@ -32,5 +33,4 @@ function App() {
     </div> 
   );
 }
-
 export default App;
