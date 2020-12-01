@@ -16,6 +16,8 @@ const LinkStyled = styled(Link)`
 const LinksWrapper = styled.div`
   width: 100%;
   text-align: center;
+  padding: 40px;
+  align-self: flex-end;
 `;
 //
 
@@ -46,25 +48,28 @@ const ProductList = ({ props }) => { //props filter z parent komponentu
     }
     return null;
   });
+
+  let productsListToShow = productsList.filter(item => item !== null);
+
   const firstProduct = pageNumber * maxItemsOnPage - maxItemsOnPage;
   const lastProduct = pageNumber * maxItemsOnPage;
-
-  const numberPageButtons = productsList.length / maxItemsOnPage;
+  const numberPageButtons = productsListToShow.length / maxItemsOnPage;
 
   for (let i = 0; i < numberPageButtons; i++) {
     pageButtons.push(
       <LinkStyled key={`page${i + 1}`} to={`/shop/${i + 1}`} >{i + 1}</LinkStyled>
     )
   }
-  productsList = productsList.slice(firstProduct, lastProduct);
+  productsListToShow = productsListToShow.slice(firstProduct, lastProduct);
   return (
     <>
       <div className="container--productsList">
-        {productsList}
+        {productsListToShow}
+        <LinksWrapper>
+          {pageButtons}
+        </LinksWrapper>
       </div>
-      <LinksWrapper>
-        {pageButtons}
-      </LinksWrapper>
+
     </>
   );
 
