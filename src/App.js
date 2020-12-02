@@ -19,9 +19,10 @@ import './App.css';
 //komponent App uzywany w index.js
 function App() {
   return (
+    <>
     <div className="App">
       <Router>
-        {<MainMenu/>}
+        <MainMenu/>
         <div className="context--container">
           <Switch>
             <Route path="/" exact component={HomePage}/>
@@ -30,7 +31,8 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </div> 
+    </div>
+    </>
   );
 }
 export default App;

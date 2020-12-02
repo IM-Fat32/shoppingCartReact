@@ -1,8 +1,9 @@
 img {
   position: relative;
-  height: 30vh;
-  width: 30vh;
+  height: 40vh;
+  width: 35vh;
   left: 50%;
+  object-fit: cover;
   transform: translate(-50%, 0);
   padding: 20px;
 }

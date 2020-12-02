@@ -1,16 +1,20 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Product from '../Product/Product.jsx';
 
 import styled from 'styled-components';
 import './ProductsList.css';
 //styled components
-const LinkStyled = styled(Link)`
+const LinkStyled = styled(NavLink)`
   padding: 1rem .5rem;
   text-decoration: none;
   color: black;
+  transition: .3s; 
+  &.active{
+    font-weight: 600;
+  }
 `;
 
 const LinksWrapper = styled.div`
@@ -27,6 +31,7 @@ const maxItemsOnPage = 6;
 //filtrowanie produktow do pokazania i render produktow
 
 const ProductList = ({ props }) => { //props filter z parent komponentu 
+  let productsListToShow = []
   const pageButtons = [];
   const pageNumber = props.match.params.page;
   const filtr = useSelector(store => store.filtr);
@@ -35,13 +40,13 @@ const ProductList = ({ props }) => { //props filter z parent komponentu
   let productsList = products.map(product => {
     if (product.nameOfProduct.includes(filtr)) {
       //jakos filtorwac po produktach
-      const { nameOfProduct, price, id, image } = product;
+      const { nameOfProduct, price, id, images } = product;
       return (
         <Product
           nameOfProduct={nameOfProduct}
           price={price}
           key={id}
-          image={image}
+          image={images.showImage}
           id={id}
         />
       )
@@ -49,7 +54,7 @@ const ProductList = ({ props }) => { //props filter z parent komponentu
     return null;
   });
 
-  let productsListToShow = productsList.filter(item => item !== null);
+  productsListToShow = productsList.filter(item => item !== null);
 
   const firstProduct = pageNumber * maxItemsOnPage - maxItemsOnPage;
   const lastProduct = pageNumber * maxItemsOnPage;
@@ -62,15 +67,12 @@ const ProductList = ({ props }) => { //props filter z parent komponentu
   }
   productsListToShow = productsListToShow.slice(firstProduct, lastProduct);
   return (
-    <>
-      <div className="container--productsList">
-        {productsListToShow}
-        <LinksWrapper>
-          {pageButtons}
-        </LinksWrapper>
-      </div>
-
-    </>
+    <div className="container--productsList">
+      {productsListToShow}
+      <LinksWrapper>
+        {pageButtons}
+      </LinksWrapper>
+    </div>
   );
 
 }
