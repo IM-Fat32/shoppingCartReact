@@ -10,11 +10,11 @@ import {
 import MainMenu from './components/MainMenu/MainMenu.jsx';
 import HomePage from './pages/homePage/HomePage.jsx';
 import ShopPage from './pages/shopPage/ShopPage.jsx';
+import CartPage from './pages/shopPage/CartPage.jsx';
 import ProductPage from './pages/shopPage/ProductPage.jsx';
 
 //style
 import './App.css';
-
 
 //komponent App uzywany w index.js
 function App() {
@@ -28,6 +28,7 @@ function App() {
             <Route path="/" exact component={HomePage}/>
             <Route path="/shop/:page" exact component={ShopPage}/>
             <Route path='/shop/product/:id' component={ProductPage}/>
+            <Route path='/cart' component={CartPage}/>
           </Switch>
         </div>
       </Router>
