@@ -1,6 +1,7 @@
 import {
   ADD_TO_CART,
   DELETE_FROM_CART,
+  EDIT_NUMBER_CART,
 } from '../actions/cartActions.js';
 
 export const cartReducer = (state = [], action) => {
@@ -10,13 +11,11 @@ export const cartReducer = (state = [], action) => {
       let isInCart = false;
       state.forEach(item => {
         if(item.id === action.payload.id){
-          item.numOfProduct += 1;
           isInCart = true;
         }
       });
       if(isInCart)
         return[...state];
-
       return [...state, action.payload];
     //usuwanie 1 elementu z listy, jak jest 1 element usuwa calkowicie ze stora koszyka
     case DELETE_FROM_CART: 
@@ -30,7 +29,19 @@ export const cartReducer = (state = [], action) => {
       if(moreThan1) //wykorzystanie flagi 
         return [...state]; //zmiana stanu z innym numerem produktow
       return state.filter(item => item.id !== action.payload.id); //usuniecie elementu
-    default:
+      //edycja ilosci towaru
+      case EDIT_NUMBER_CART:
+        let isInCartEdit = false;
+        state.forEach(item => {
+          if(item.id === action.payload.id){
+            item.numOfProduct += 1;
+            isInCartEdit = true;
+          }
+        });
+        if(isInCartEdit)
+          return[...state];
+        return [...state, action.payload];
+      default:
       console.warn(`Brak akcji ${action.type} w cartActions`)
       return state;
   }

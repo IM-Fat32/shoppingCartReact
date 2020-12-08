@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import Product from '../Product/Product.jsx';
 
 import styled from 'styled-components';
-import './ProductsList.css';
+
 //styled components
 const LinkStyled = styled(NavLink)`
   padding: 1rem .5rem;
@@ -22,6 +22,16 @@ const LinksWrapper = styled.div`
   text-align: center;
   padding: 40px;
   align-self: flex-end;
+`;
+
+const ProductsListContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 90vh;
+  justify-content: space-around;
+  padding: 6rem 4rem 0 4rem;
+  flex-grow: 1;
+  height: 100%;
 `;
 //
 
@@ -40,7 +50,7 @@ const ProductList = ({ props }) => { //props filter z parent komponentu
   let productsList = products.map(product => {
     if (product.nameOfProduct.includes(filtr)) {
       //jakos filtorwac po produktach
-      const { nameOfProduct, price, id, images } = product;
+      const { nameOfProduct, price, id, images, magazine } = product;
       return (
         <Product
           nameOfProduct={nameOfProduct}
@@ -48,6 +58,7 @@ const ProductList = ({ props }) => { //props filter z parent komponentu
           key={id}
           image={images.showImage}
           id={id}
+          magazine={magazine}
         />
       )
     }
@@ -67,12 +78,12 @@ const ProductList = ({ props }) => { //props filter z parent komponentu
   }
   productsListToShow = productsListToShow.slice(firstProduct, lastProduct);
   return (
-    <div className="container--productsList">
-      {productsListToShow}
+    <ProductsListContainer>
+      { productsListToShow}
       <LinksWrapper>
         {pageButtons}
       </LinksWrapper>
-    </div>
+    </ProductsListContainer>
   );
 
 }
