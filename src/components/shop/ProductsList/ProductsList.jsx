@@ -79,7 +79,7 @@ const ProductList = ({ props }) => { //props filter z parent komponentu
   productsListToShow = productsListToShow.slice(firstProduct, lastProduct);
   return (
     <ProductsListContainer>
-      { productsListToShow}
+      { productsListToShow.length > 0 ? productsListToShow : <p>Brak produktów</p>}
       <LinksWrapper>
         {pageButtons}
       </LinksWrapper>

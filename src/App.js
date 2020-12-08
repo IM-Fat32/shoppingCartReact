@@ -29,6 +29,7 @@ function App() {
             <Route path="/shop/:page" exact component={ShopPage}/>
             <Route path='/shop/product/:id' component={ProductPage}/>
             <Route path='/cart' component={CartPage}/>
+            <Route path='/done' component={CartPage}/>
           </Switch>
         </div>
       </Router>
