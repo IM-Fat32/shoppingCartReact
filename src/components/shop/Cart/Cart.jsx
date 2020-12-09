@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+
 
 import { editNumberCart, deleteFromCart } from '../../../actions/cartActions.js';
 
@@ -19,6 +19,7 @@ import {
   Counter,
   NumberOfProducts,
   StyledButton,
+  StyledLink
 } from '../Cart/CartStyledComponents.js';
 
 export const checkProductIsNotAvailable = (productsMagazine, numberOfProducts) => {
@@ -57,7 +58,10 @@ const Cart = ({ callback, state }) => { //callback , fukcja zamykająca okno kos
             <NumberOfProductsDivStyle>
               <p>Ilość: </p>
               <Counter>
-                <StyledButton onClick={() => { handleDeleteFromCart(id) }}> {numOfProduct > 1 ? "-" : "x"} </StyledButton>
+                <StyledButton onClick={() => { handleDeleteFromCart(id) }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
+                > {numOfProduct > 1 ? "-" : "x"} </StyledButton>
                 <NumberOfProducts>{numOfProduct}</NumberOfProducts>
                 <StyledButton
                   add="true"
@@ -66,6 +70,8 @@ const Cart = ({ callback, state }) => { //callback , fukcja zamykająca okno kos
                     handleEditCart(elementToAdd, magazine, numOfProduct);
                   }}
                   disabled={checkProductIsNotAvailable(magazine, numOfProduct)}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
                 > + </StyledButton>
               </Counter>
             </NumberOfProductsDivStyle>
@@ -91,7 +97,7 @@ const Cart = ({ callback, state }) => { //callback , fukcja zamykająca okno kos
         showCartArray.length > 0 ?
           <>
             {showCartArray}
-            <Link to="/cart">Zobacz cały koszyk</Link>
+            <StyledLink to="/cart">Zobacz cały koszyk</StyledLink>
             <p>Total: {totalPrice}zł</p>
           </>
           : <p>Twój koszyk jest pusty</p>

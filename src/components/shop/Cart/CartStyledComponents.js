@@ -1,6 +1,7 @@
 import { mainTheme } from '../../../Themes.js';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 //Styled components
 
 export const ItemInCartStyle = styled.div`
@@ -35,16 +36,16 @@ export const TextWrapper = styled.div`
 
 export const ExitCartStyled = styled.button`
   position: absolute;
-  top: -0.4rem;
-  left: -0.4rem;
-  font-size: 0.6rem;
+  top: 0;
+  left: 0;
+  font-size: .8rem;
   padding: 0.3rem 0.4rem;
-  border-radius: 50%;
-  border: .1rem solid  ${mainTheme.secondary};
-  color: #fff;
-  background-color: ${mainTheme.secondary};
+  border: none; 
+  color: ${mainTheme.primary};
+  background-color: white;
   cursor: pointer;
   font-weight: 600;
+  outline: none;
 `;
 
 export const CartWrapper = styled(motion.div)`
@@ -81,13 +82,21 @@ export const NumberOfProducts = styled.div`
   margin-left: .5rem;
 `;
 
-export const StyledButton = styled.button`
+export const StyledButton = styled(motion.button)`
   padding : 0 .4rem;
   margin-left: .5rem;
   border: none;
-  background-color: red;
-  background-color: ${({ add = false }) => (add ? 'green' : 'red')};
+  background-color: ${({ add = false }) => (add ? '#05D88E' : '#c40015')};
   color: white;
   border-radius: .3rem;
+  cursor: pointer;
+  outline: none;
+  font-size: .9rem;
+`;
+
+export const StyledLink = styled(Link)`
+  color : #119e58;
+  text-decoration: none;
+  padding: 2rem  0;
 `;
 //

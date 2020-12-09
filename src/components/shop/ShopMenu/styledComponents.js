@@ -40,7 +40,6 @@ export const FaviconButtonStyle = styled(motion.button)`
 `;
 
 export const SearchInputStyle = styled.input`
-  border-radius: 10px;
   font-size: 0.8rem;
   padding: 0px 1rem;
   height: 2rem;
@@ -52,7 +51,6 @@ export const SearchInputStyle = styled.input`
 export const ToolsToRightWrapperStyle = styled.div`
   padding: 0.2rem 0.3rem;
   background-color: ${mainTheme.primary};
-  border-radius: 10px;
   display: flex;
   align-items: center;
 `;

@@ -5,7 +5,7 @@ import { addToCart } from '../../actions/cartActions';
 
 import ShopMenu from '../../components/shop/ShopMenu/ShopMenu.jsx';
 
-import { ProductAddToCartButton, ProductInteractiveWrapper, ProductAddToCartButtonSpan } from '../../components/shop/Product/Product.jsx';
+import { ProductAddToCartButton, ProductAddToCartButtonSpan } from '../../components/shop/Product/styledComponents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -24,7 +24,9 @@ import {
   Info,
   Title,
   PanelWrapper,
-  Arrows
+  Arrows,
+  MyWrapper,
+  MyButtonWrapper
 } from './ProductPageStyledComponents.js';
 
 const ProductPage = (props) => {
@@ -104,8 +106,30 @@ const ProductPage = (props) => {
         <StyledPrice>{price} zł</StyledPrice>
         <SliderWrapper>
           <Arrows>
-            <StyledButton icon={faArrowLeft} left="true" onClick={prevImageButton}>prev</StyledButton>
-            <StyledButton icon={faArrowRight} left="false" onClick={nextImageButton} > next</StyledButton>
+            <MyButtonWrapper
+              whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 1 }}
+            >
+              <StyledButton
+                icon={faArrowLeft}
+                left="true"
+                onClick={prevImageButton}
+              >
+                prev
+            </StyledButton>
+            </MyButtonWrapper>
+            <MyButtonWrapper
+              whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 1 }}
+            >
+              <StyledButton
+                icon={faArrowRight}
+                left="false"
+                onClick={nextImageButton}
+              >
+                next
+            </StyledButton>
+            </MyButtonWrapper>
           </Arrows>
           <StyledImage src={tabImages[currentImage]} alt="" />
           <MiniMenuWarapper>
@@ -114,12 +138,15 @@ const ProductPage = (props) => {
         </SliderWrapper>'
         <PanelWrapper>
           <Title>Dostępne sztuki: {magazine} </Title>
-          <ProductInteractiveWrapper>
+          <MyWrapper
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+          >
             <ProductAddToCartButton onClick={handleAddToCart}>
               <FontAwesomeIcon icon={faCartPlus} />
               <ProductAddToCartButtonSpan>add to cart</ProductAddToCartButtonSpan>
             </ProductAddToCartButton>
-          </ProductInteractiveWrapper>
+          </MyWrapper>
         </PanelWrapper>
         <Title style={{ marginBottom: ".5rem" }}>Specyfikacja:</Title>
         <Info>Ekran: {screen}"</Info>

@@ -14,6 +14,7 @@ import HomePage from './pages/homePage/HomePage.jsx';
 import ShopPage from './pages/shopPage/ShopPage.jsx';
 import CartPage from './pages/cartPage/CartPage.jsx';
 import ProductPage from './pages/productPage/ProductPage.jsx';
+import DonePage from './pages/donePage/DonePage.jsx';
 import Footer from './components/Footer/Footer.jsx';
 
 //style
@@ -33,7 +34,7 @@ function App() {
               <Route path="/shop/:page" exact component={ShopPage}/>
               <Route path='/shop/product/:id' component={ProductPage}/>
               <Route path='/cart' component={CartPage}/>
-              <Route path='/done' component={CartPage}/>
+              <Route path='/done' component={DonePage}/>
             </Switch>
           </AnimatePresence>
           <Footer/>

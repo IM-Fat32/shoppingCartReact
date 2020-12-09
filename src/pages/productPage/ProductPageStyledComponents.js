@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { mainTheme } from '../../Themes.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {motion} from 'framer-motion';
 
 export const ProductWrappper = styled.div`
   padding: 4rem 7rem;
@@ -84,5 +85,15 @@ export const PanelWrapper = styled.div`
   justify-content: space-between;
   align-content: center;
   padding : .5rem 5rem;
+`;
+
+export const MyWrapper = styled(motion.div)`
+  display: flex;
+  justify-content: space-around;
+  height: 2.5rem;
+  line-height: 2.5rem;
+`;
+
+export const MyButtonWrapper = styled(motion.div)`
 `;
 //

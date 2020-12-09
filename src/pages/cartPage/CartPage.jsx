@@ -72,7 +72,13 @@ const BuyPanel = styled.div`
 `;
 
 const BuyNowButton = styled.button`
-
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  background-color: #05D88E;
+  border: none;
+  border-radius: 1rem;
+  color: white;
 `;
 
 //
@@ -98,7 +104,7 @@ const CartPage = () => {
       <ProductWrapper key={id}>
         <TextWrapper>
           <StyledNameProductCartPage>{nameOfProduct}</StyledNameProductCartPage>
-          <StyledPriceCartPage>{price}</StyledPriceCartPage>
+          <StyledPriceCartPage>{price} zł</StyledPriceCartPage>
           <NumberAndButtonsWrapper>
             <StyledButton
               onClick={handleDeleteButton}>
@@ -131,26 +137,32 @@ const CartPage = () => {
 
   return (
     <>
-      <ShopMenu />
-      <StyledContainer
+      <Container
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        exit="exit"
-      >
-        {cartProducts.length > 0 ?
-          <> {cartProducts.reverse()}
-            <BuyPanel>
-              <StyledPrice>Total price: {totalPrice}</StyledPrice>
-              <Link to="/done">
-                <BuyNowButton onClick={handleReduceNumberOfProducts}>
-                  buy now
+        exit="exit">
+        <ShopMenu />
+        <StyledContainer
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          {cartProducts.length > 0 ?
+            <> {cartProducts.reverse()}
+              <BuyPanel>
+                <StyledPrice>Łączna kwota: {totalPrice} zł</StyledPrice>
+                <Link to="/done">
+                  <BuyNowButton onClick={handleReduceNumberOfProducts}>
+                    Kup teraz
             </BuyNowButton>
-              </Link>
-            </BuyPanel>
-          </>
-          : <p>Koszyk jest pusty, dodaj trochę produktów</p>}
-      </StyledContainer>
+                </Link>
+              </BuyPanel>
+            </>
+            : <p>Koszyk jest pusty, dodaj trochę produktów</p>}
+        </StyledContainer>
+      </Container>
     </>
 
   );
