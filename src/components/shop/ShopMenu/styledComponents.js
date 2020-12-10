@@ -53,15 +53,19 @@ export const ToolsToRightWrapperStyle = styled.div`
   background-color: ${mainTheme.primary};
   display: flex;
   align-items: center;
+  margin-right: 50px;
 `;
 
 export const ShopToolsWrapper = styled.div`
+  display: none;
+  @media (min-width: 1024px) {
   position: fixed;
   top: 0;
   z-index: 9;
   display: flex;
   padding: 1rem 3rem;
   width:100%;
+  }
 `;
 //
 export const cartVariants = {
