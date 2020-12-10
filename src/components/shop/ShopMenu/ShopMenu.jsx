@@ -71,7 +71,7 @@ const ShopMenu = () => {
           </FaviconButtonStyle>
         </ToolsToRightWrapperStyle>
         <label>
-          <ToolsToRightWrapperStyle style={{ cursor: "pointer", marginLeft: "4rem" }}>
+          <ToolsToRightWrapperStyle style={{ cursor: "pointer" }}>
             <FaviconButtonStyle
               onClick={handleChangeCartVisibility}
               whileHover={{ scale: 0.8 }}
