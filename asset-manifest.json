@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/react-shop-deploy/static/css/main.8212c517.chunk.css",
+    "main.js": "/react-shop-deploy/static/js/main.3318aa1c.chunk.js",
+    "main.js.map": "/react-shop-deploy/static/js/main.3318aa1c.chunk.js.map",
+    "runtime-main.js": "/react-shop-deploy/static/js/runtime-main.6cd93241.js",
+    "runtime-main.js.map": "/react-shop-deploy/static/js/runtime-main.6cd93241.js.map",
+    "static/js/2.349dd26c.chunk.js": "/react-shop-deploy/static/js/2.349dd26c.chunk.js",
+    "static/js/2.349dd26c.chunk.js.map": "/react-shop-deploy/static/js/2.349dd26c.chunk.js.map",
+    "index.html": "/react-shop-deploy/index.html",
+    "static/css/main.8212c517.chunk.css.map": "/react-shop-deploy/static/css/main.8212c517.chunk.css.map",
+    "static/js/2.349dd26c.chunk.js.LICENSE.txt": "/react-shop-deploy/static/js/2.349dd26c.chunk.js.LICENSE.txt",
+    "static/media/Apple_iPhone_8_64GB_Gold1.03fb5de7.jpg": "/react-shop-deploy/static/media/Apple_iPhone_8_64GB_Gold1.03fb5de7.jpg",
+    "static/media/Apple_iPhone_8_64GB_Gold2.3872ca6b.jpg": "/react-shop-deploy/static/media/Apple_iPhone_8_64GB_Gold2.3872ca6b.jpg",
+    "static/media/Apple_iPhone_SE_64GB_Black1.6b734968.jpg": "/react-shop-deploy/static/media/Apple_iPhone_SE_64GB_Black1.6b734968.jpg",
+    "static/media/Apple_iPhone_SE_64GB_Black2.a42f5b68.jpg": "/react-shop-deploy/static/media/Apple_iPhone_SE_64GB_Black2.a42f5b68.jpg",
+    "static/media/Apple_iPhone_SE_64GB_Black3.c88f309e.jpg": "/react-shop-deploy/static/media/Apple_iPhone_SE_64GB_Black3.c88f309e.jpg",
+    "static/media/Huawei_P30_Pro_128GB_Opal1.56fb8dbb.jpg": "/react-shop-deploy/static/media/Huawei_P30_Pro_128GB_Opal1.56fb8dbb.jpg",
+    "static/media/Huawei_P30_Pro_128GB_Opal2.66783b0a.jpg": "/react-shop-deploy/static/media/Huawei_P30_Pro_128GB_Opal2.66783b0a.jpg",
+    "static/media/Huawei_P30_Pro_128GB_Opal3.ec4d1a60.jpg": "/react-shop-deploy/static/media/Huawei_P30_Pro_128GB_Opal3.ec4d1a60.jpg",
+    "static/media/Huawei_Y5_2019_czarny1.06226e42.jpg": "/react-shop-deploy/static/media/Huawei_Y5_2019_czarny1.06226e42.jpg",
+    "static/media/Huawei_Y5_2019_czarny2.630160d8.jpg": "/react-shop-deploy/static/media/Huawei_Y5_2019_czarny2.630160d8.jpg",
+    "static/media/Huawei_Y5_2019_czarny3.a85096cf.jpg": "/react-shop-deploy/static/media/Huawei_Y5_2019_czarny3.a85096cf.jpg",
+    "static/media/Motorola_Moto_G8_Power_64GB_Dual_SIM_Capri1.3c254b41.jpg": "/react-shop-deploy/static/media/Motorola_Moto_G8_Power_64GB_Dual_SIM_Capri1.3c254b41.jpg",
+    "static/media/Motorola_Moto_G8_Power_64GB_Dual_SIM_Capri2.e1f6ed03.jpg": "/react-shop-deploy/static/media/Motorola_Moto_G8_Power_64GB_Dual_SIM_Capri2.e1f6ed03.jpg",
+    "static/media/Motorola_Moto_G8_Power_64GB_Dual_SIM_Capri3.cfafb15e.jpg": "/react-shop-deploy/static/media/Motorola_Moto_G8_Power_64GB_Dual_SIM_Capri3.cfafb15e.jpg",
+    "static/media/Xiaomi_Redmi_Note_8_PRO_64GB_Mineral_Grey1.94f1651b.jpg": "/react-shop-deploy/static/media/Xiaomi_Redmi_Note_8_PRO_64GB_Mineral_Grey1.94f1651b.jpg",
+    "static/media/Xiaomi_Redmi_Note_8_PRO_64GB_Mineral_Grey2.2814f5a7.jpg": "/react-shop-deploy/static/media/Xiaomi_Redmi_Note_8_PRO_64GB_Mineral_Grey2.2814f5a7.jpg",
+    "static/media/Xiaomi_Redmi_Note_8_PRO_64GB_Mineral_Grey3.73e77f61.jpg": "/react-shop-deploy/static/media/Xiaomi_Redmi_Note_8_PRO_64GB_Mineral_Grey3.73e77f61.jpg",
+    "static/media/Xiaomi_Redmi_Note_9_128GB_Midnight_Grey1.1ebdcc99.jpg": "/react-shop-deploy/static/media/Xiaomi_Redmi_Note_9_128GB_Midnight_Grey1.1ebdcc99.jpg",
+    "static/media/Xiaomi_Redmi_Note_9_128GB_Midnight_Grey2.fcd8e47d.jpg": "/react-shop-deploy/static/media/Xiaomi_Redmi_Note_9_128GB_Midnight_Grey2.fcd8e47d.jpg",
+    "static/media/Xiaomi_Redmi_Note_9_128GB_Midnight_Grey3.d8e6a09a.jpg": "/react-shop-deploy/static/media/Xiaomi_Redmi_Note_9_128GB_Midnight_Grey3.d8e6a09a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6cd93241.js",
+    "static/js/2.349dd26c.chunk.js",
+    "static/css/main.8212c517.chunk.css",
+    "static/js/main.3318aa1c.chunk.js"
+  ]
+}
